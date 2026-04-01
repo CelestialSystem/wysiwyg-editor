@@ -53,7 +53,7 @@ jobs:
             }
 
             
-      - name: Dispatch to WordPress child repo
+      - name: Dispatch to Wordpress child repo
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
@@ -77,6 +77,7 @@ jobs:
               "version": "${{ env.VERSION }}",
               "release_notes": ${{ toJson(github.event.release.body) }}
             }
+
 
 
       - name: Dispatch to Python child repo
@@ -116,6 +117,7 @@ jobs:
               "version": "${{ env.VERSION }}",
               "release_notes": ${{ toJson(github.event.release.body) }}
             }
+
 
 
       - name: Dispatch to React child repo
@@ -170,6 +172,7 @@ jobs:
             }
 
 
+
       - name: Dispatch to Meteor child repo
         uses: peter-evans/repository-dispatch@v3
         with:
@@ -207,6 +210,7 @@ jobs:
               "version": "${{ env.VERSION }}",
               "release_notes": ${{ toJson(github.event.release.body) }}
             }
+
 
 
       - name: Dispatch to Cake2 child repo
